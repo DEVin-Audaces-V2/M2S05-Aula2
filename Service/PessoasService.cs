@@ -1,10 +1,12 @@
 using Escola.Model;
+using Escola.Interface;
 
 namespace Escola.Service
 {
-    public class PessoasService
+    public class PessoasService : IPessoasService
     {
         List<Pessoa> pessoas = new List<Pessoa>();
+
         public void CadastrarAluno(){
             var aluno = new Aluno();
 

@@ -1,9 +1,17 @@
+using Escola.Interface;
+using Escola.Mocks;
 
 namespace Escola.Service
 {
     public class MenuService
     {
-        private readonly PessoasService _pessoaService = new PessoasService();
+        private readonly IPessoasService _pessoaService;
+
+        public MenuService(IPessoasService pessoaService)
+        {
+            _pessoaService = pessoaService;
+        }
+
         public void ExibirMenu(){
 
             Console.WriteLine("Bem vindo a escola digite uma opção para continuar:");
